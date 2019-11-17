@@ -1,12 +1,8 @@
 package ua.kpi.entities;
 
-import java.util.ArrayList;
+import lombok.*;
+
 import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
 
 @Getter
 @AllArgsConstructor
@@ -16,5 +12,5 @@ import lombok.ToString;
 public class Student {
     private String name;
     private double rating;
-    private List<Exam> exams = new ArrayList<>();
+    private List<Exam> exams;
 }
