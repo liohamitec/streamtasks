@@ -119,13 +119,13 @@ class StudentServiceTest {
     assertThat(resultList, contains(STUDENT_5));
   }
 
-  @Test
-  void findTopTwoEnglishStudents() { //task 12
+  @Test //12
+  void findTopTwoEnglishStudents() {
     List<Student> resultList = studentService.findBestScoredStudents(2, Type.ENGLISH);
     assertThat(resultList, containsInAnyOrder(STUDENT_3, STUDENT_5));
   }
 
-  @Test
+  @Test //15
   void checkToStringOutput() {
     List<String> resultList = studentService.getAllStudentsReport();
     resultList.forEach(System.out::println);

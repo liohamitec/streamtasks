@@ -46,13 +46,13 @@ public class StudentService {
             .collect(Collectors.toList());
   }
 
-  public List<Student> findWithExamsAmount(int examsAmount) { //task 5
+  public List<Student> findWithExamsAmount(int examsAmount) { //5
     return studentRepository.findAll().stream()
             .filter(student -> student.getExams().size() == examsAmount)
             .collect(Collectors.toList());
   }
 
-  public List<Student> findWithExamAndRating(Type examType, double rating) { //task 7
+  public List<Student> findWithExamAndRating(Type examType, double rating) { //7
     return studentRepository.findAll().stream()
             .filter(student -> student.getExams().stream().anyMatch(exam -> exam.getType().equals(examType))
                     && student.getRating() >= rating)
